@@ -1,0 +1,12 @@
+---
+trigger:
+ - develop
+
+pool:
+ -vmImage: 'ubuntu 22.04'
+
+steps:
+ - task: dotnetcorecli@2
+    inputs:
+     command: 'built'
+     projects: **/*.sln
